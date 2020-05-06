@@ -9,15 +9,15 @@ import java.util.List;
 public class Responce {
     private Coord coord;
     private String base;
+    private Main main;
     private Float visibility;
+    private Wind wind;
+    private Clouds clouds;
     private Float dt;
+    private Sys sys;
     private Long id;
     private String name;
     private Long cod;
-    private Main main;
-    private Wind wind;
-    private Clouds clouds;
-    private Sys sys;
 
     @JsonProperty("weather")
     private List<Weather> weathers;
@@ -30,21 +30,20 @@ public class Responce {
         this.coord = coord;
     }
 
-    public List<Weather> getWeathers() {
-        return weathers;
-    }
-
-    public void setWeathers(List<Weather> weathers) {
-        this.weathers = weathers;
-    }
-
-
     public String getBase() {
         return base;
     }
 
     public void setBase(String base) {
         this.base = base;
+    }
+
+    public Main getMain() {
+        return main;
+    }
+
+    public void setMain(Main main) {
+        this.main = main;
     }
 
     public Float getVisibility() {
@@ -55,12 +54,36 @@ public class Responce {
         this.visibility = visibility;
     }
 
+    public Wind getWind() {
+        return wind;
+    }
+
+    public void setWind(Wind wind) {
+        this.wind = wind;
+    }
+
+    public Clouds getClouds() {
+        return clouds;
+    }
+
+    public void setClouds(Clouds clouds) {
+        this.clouds = clouds;
+    }
+
     public Float getDt() {
         return dt;
     }
 
     public void setDt(Float dt) {
         this.dt = dt;
+    }
+
+    public Sys getSys() {
+        return sys;
+    }
+
+    public void setSys(Sys sys) {
+        this.sys = sys;
     }
 
     public Long getId() {
@@ -87,35 +110,11 @@ public class Responce {
         this.cod = cod;
     }
 
-    public Main getMain() {
-        return main;
+    public List<Weather> getWeathers() {
+        return weathers;
     }
 
-    public void setMain(Main main) {
-        this.main = main;
-    }
-
-    public Wind getWind() {
-        return wind;
-    }
-
-    public void setWind(Wind wind) {
-        this.wind = wind;
-    }
-
-    public Clouds getClouds() {
-        return clouds;
-    }
-
-    public void setClouds(Clouds clouds) {
-        this.clouds = clouds;
-    }
-
-    public Sys getSys() {
-        return sys;
-    }
-
-    public void setSys(Sys sys) {
-        this.sys = sys;
+    public void setWeathers(List<Weather> weathers) {
+        this.weathers = weathers;
     }
 }
